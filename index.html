@@ -1,16 +1,120 @@
 <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>Boreal3D</title> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boreal3D: A synthetic 3D forest point cloud dataset for advanced research in forest resource monitoring and ecosystem studies.">
+    <meta name="keywords" content="Boreal3D, forest, 3D point cloud, dataset, deep learning, ecosystem research, forest resource monitoring">
+    <title>Boreal3D</title>
+    <!-- Link to External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
+
 <body>
-	<h1>Boreal3D</h1>
-	<div>
-		<a href="https://drive.google.com/file/d/11nioDLNZMRI-Jp7df8IrI0sED31RIjp8/view?usp=drive_link">Google Drive</a>
-	</div>
-	<div>
-		<a href="https://pan.baidu.com/s/1oO0znppUjKLqkeFRQ5_u1Q?pwd=dmua">Baidu Netdisk</a>
-	</div>
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">Boreal3D</a>
+            </div>
+            <!-- Navigation links -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#overview" class="active">Overview</a></li>
+                    <li><a href="#tutorial">Tutorial</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="container">
+            <h1>Welcome to Boreal3D</h1>
+            <p>A synthetic 3D forest point cloud dataset, specifically developed to support advanced research in large-scale forest scene understanding and structural parameter estimation.</p>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="image-section">
+        <div class="container">
+            <div class="image-slider">
+                    <img src="assets/images/forest-image1.png" alt="Forest Image 1" class="image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2>Overview</h2>
+            <p>
+                Boreal3D is a comprehensive synthetic forest point cloud dataset designed to support advanced research in large-scale forest scene understanding and fine-grained 3D forest structure analysis. It includes 1,000 highly realistic and structurally diverse forest plots, collected across four different platforms. The dataset contains 48,403 trees and over 35.3 billion data points, offering an invaluable resource for ecological research, deep learning applications, and the detailed analysis of forest structures.
+            </p>
+            <p>
+                Each point in the dataset is meticulously labeled with semantic, instance, and viewpoint information, as well as other relevant annotations, facilitating a wide range of research applications, including but not limited to forest resource management, ecological modeling, and environmental monitoring. Additionally, each tree is characterized by key structural parameters, including tree diameter, crown width, leaf area, and total volume, making it an essential tool for large-scale forest scene understanding, fine-grained structural analysis, and forest dynamics modeling, among other applications.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tutorial Section -->
+    <section id="tutorial" class="content-section">
+        <div class="container">
+            <h2>Tutorial</h2>
+            <p>All plot data are stored in individual folders, with folder names following the format: <code>&lt PlotType &gt Plot &lt PlotNumber &gt</code>. For example, <code>EasyPlot1</code> represents the first plot of the "Easy" type.</p>
+            <p>Each folder contains four files: <code>ALS.laz, ULS.laz, MLS.laz, </code> and <code>TLS.laz</code>, corresponding to four different data collection platforms.</p>
+
+            Each .laz file contains the following key fields:
+            <ol>
+                <li>
+                    <code>x,y,z</code>: Represent the spatial coordinates of the points.
+                </li>
+                <li>
+                    <code>semantic_id</code>: Represents the semantic label. 0 indicates understory, 1 indicates terrain, 2 indicates Leaf, and 3 indicates Wood.
+                </li>
+                <li>
+                    <code>instance_id</code>: Represents the instance label. 0 indicates non-tree objects, while values from 1 to N indicate individual tree identifiers.
+                </li>
+                <li>
+                    <code>From</code>: Represents the viewpoint information.
+                </li>
+                <li>
+                    <code>species_id</code>: Represents the species label. 0 indicates non-tree objects, 1 indicates Spruce, 2 indicates Pine, and 3 indicates Birch.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section">
+        <div class="container">
+            <h2>Download</h2>
+            <p>Get access to the Boreal3D dataset for free. Click one of the links below to start your download:</p>
+            <i>The organization of the Boreal3D dataset is currently underway. At this stage, we are releasing the portion of the dataset that has been completed and fully processed. The remaining data will be made publicly available in phases.</i>
+            <p></p>
+            <!-- Google Drive Link -->
+            <a href="https://drive.google.com/file/d/11nioDLNZMRI-Jp7df8IrI0sED31RIjp8/view?usp=drive_link" class="download-button" target="_blank">Download from Google Drive</a>
+            
+            <!-- Baidu Netdisk Link -->
+            <a href="https://pan.baidu.com/s/1oO0znppUjKLqkeFRQ5_u1Q?pwd=dmua" class="download-button" target="_blank">Download from Baidu Netdisk</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            If you require any assistance or have inquiries, please feel free to contact us via email at: 
+            jingliu(at)stu(dot)xjtu(dot)edu(dot)cn.
+        </p>
+        <div class="container">
+            <p>&copy; 2025 Boreal3D. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
